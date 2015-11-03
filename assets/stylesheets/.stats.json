@@ -1,0 +1,32 @@
+{
+    "total-stylesheets": 1,
+    "total-stylesheet-size": 17361,
+    "total-rules": 230,
+    "total-selectors": 359,
+    "total-identifiers": 524,
+    "total-declarations": 585,
+    "selectors-per-rule": 1.5608695652173914,
+    "identifiers-per-selector": 1.4596100278551531,
+    "specificity-per-selector": 11.022284122562674,
+    "top-selector-specificity": 31,
+    "top-selector-specificity-selector": ".form-element__control:focus::-webkit-input-placeholder",
+    "total-id-selectors": 0,
+    "total-unique-colours": 9,
+    "unique-colours": [
+        "#CB3837",
+        "#000000",
+        "#F5F5F5",
+        "#888888",
+        "#CCCCCC",
+        "#A42C2B",
+        "#D3D3D3",
+        "#BABABA",
+        "#B93130"
+    ],
+    "total-important-keywords": 0,
+    "total-media-queries": 2,
+    "media-queries": [
+        "only print",
+        "screen and (min-width:768px)"
+    ]
+}
