@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {{> head}}
+</head>
+<body>
+  <nav class="top-nav hidden-md-down">
+    <div class="l-container">
+      <a href="#" class="top-nav__item top-nav__item--npm-expansions">npm expansions</a>
+      <a href="#" class="top-nav__item">item 1</a>
+      <a href="#" class="top-nav__item">item 2</a>
+      <a href="#" class="top-nav__item">item 3</a>
+      <a href="#" class="top-nav__item">item 4</a>
+      <a href="#" class="top-nav__item">item 5</a>
+    </div>
+  </nav>
+
+  <header class="header">
+    <div class="l-container">
+      <svg xmlns="http://www.w3.org/2000/svg" class="header__logo" width="125" height="49" viewBox="0 0 18 7" aria-labelledby="title desc" role="img">
+        <title id="title">The logo of npm, Inc.</title>
+        <desc id="desc">A logo of npm in white colored letters with a red border.</desc>
+        <a xlink:href="{{baseurl}}/">
+          <path fill="#cb3837" d="M0,0v6h5v1h4v-1h9v-6"></path>
+          <path fill="#ffffff" d="M1,1v4h2v-3h1v3h1v-4h1v5h2v-4h1v2h-1v1h2v-4h1v4h2v-3h1v3h1v-3h1v3h1v-4"></path>
+        </a>
+      </svg>
+
+      <div class="header__user">
+        <ul class="header__user-action">
+          <li class="header__user-action-item"><a href="#">username</a></li>
+          <li class="header__user-action-item"><a href="#" class="u-text-light u-text-narrowed">log out</a></li>
+        </ul>
+        <a href="#" class="header__user-avatar">
+          <img src="{{baseurl}}/assets/images/placeholder.png" class="avatar">
+        </a>
+      </div>
+
+      <form class="header__search">
+        <input type="search" placeholder="find packages" autocorrect="off" autocapitalize="off" autocomplete="off" class="header__search-input">
+        <label class="header__search-submit">
+          <input type="submit" value="search" hidden>
+          <svg width="16" height="16" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" class="header__search-submit-icon">
+            <g transform="translate(2 2)" stroke="black" fill="none" fill-rule="evenodd">
+              <ellipse stroke-width="4" cx="11.5" cy="11" rx="11.5" ry="11"/><path d="M20.5 20.5l7.172 7.172" stroke-width="5" stroke-linecap="square"/>
+            </g>
+          </svg>
+        </label>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    {{{ content }}}
+  </main>
+
+  <footer class="l-container">
+  <nav class="footer">
+      {{#repeat 3}}
+      <div class="footer__group">
+        <h3 class="footer__group-heading">Footer group heading</h3>
+        <a href="#" class="footer__group-item">Item 1</a>
+        <a href="#" class="footer__group-item">Item 2</a>
+        <a href="#" class="footer__group-item">Item 3</a>
+        <a href="#" class="footer__group-item">Item 3</a>
+      </div>
+      {{/repeat}}
+    </nav>
+    <div class="footer-mini">
+      <span data-js="♥">npm loves you</span>
+    </div>
+  </footer>
+
+  {{> scripts}}
+  <script>
+    (function adjustIframe(context) {
+      var iframe = context.frameElement;
+
+      // If we are inside a iframe, adjust width/height.
+      if (iframe) {
+        iframe.style.width = '1180px';
+        iframe.style.height = context.document.body.offsetHeight + 'px';
+      }
+    })(window);
+  </script>
+</body>
+</html>

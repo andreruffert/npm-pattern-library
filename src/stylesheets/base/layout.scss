@@ -1,0 +1,45 @@
+// Fixed `max-width`, centered column for site content.
+.l-container {
+  @extend .u-clearfix;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: $l-container-width;
+}
+
+.l-container--medium {
+  max-width: $l-container-width-medium;
+}
+
+.l-container--narrow {
+  max-width: $l-container-width-narrow;
+}
+
+.l-content {
+  @include mq($bp-md) {
+    float: left;
+    width: 65%;
+  }
+}
+
+.l-sidebar {
+  margin-top: 40px;
+
+  @include mq($bp-md) {
+    float: right;
+    width: 30%;
+  }
+}
+
+.l-columnar {
+  columns: 1;
+
+  @include mq($bp-md) {
+    columns: 3;
+    column-gap: 40px;
+  }
+}
+
+.l-columnar-item {
+  page-break-inside: avoid;
+  padding: 5px 5px 20px 5px;
+}

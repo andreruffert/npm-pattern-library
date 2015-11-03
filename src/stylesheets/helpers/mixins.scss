@@ -1,0 +1,14 @@
+// Mixin for defining various breakpoints.
+//
+// Examle usage: @include mq($width) { display: block; }
+@mixin mq($breakpoint, $query1: min, $query2: width) {
+  @if $query1 != "max" {
+    @media only print, screen and (#{$query1}-#{$query2}: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @media only screen and (#{$query1}-#{$query2}: $breakpoint) {
+      @content;
+    }
+  }
+}

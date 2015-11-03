@@ -1,0 +1,36 @@
+---
+title: Showcase list
+section: components
+---
+
+<h1>{{title}}</h1>
+
+
+<h2>Package showcase list with logo</h2>
+{{#example}}
+<ul class="showcase-list">
+  {{#repeat 3}}
+  <li class="showcase-list__item">
+    <a href="#" class="showcase-list__item-logo"><img src="https://cldup.com/Rg6WLgqccB.svg" width="50"></a>
+    <h3 class="showcase-list__item-name"><a href="#">package-name</a></h3>
+    <p class="showcase-list__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="showcase-list__item-stats"><a href="#">v1.0.0</a> published some time ago by <a href="#">username</a></p>
+  </li>
+  {{/repeat}}
+</ul>
+{{/example}}
+
+
+<h2>Package showcase list with icon</h2>
+<p>For a <code>showcase-list</code> with icons add the <code>showcase-list--has-icon</code> modifier class.</p>
+{{#example}}
+<ul class="showcase-list showcase-list--has-icon">
+  {{#repeat 3}}
+  <li class="showcase-list__item">
+    <h3 class="showcase-list__item-name"><a href="#">package-name</a></h3>
+    <p class="showcase-list__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="showcase-list__item-stats"><a href="#">v1.0.0</a> published some time ago by <a href="#">username</a></p>
+  </li>
+  {{/repeat}}
+</ul>
+{{/example}}

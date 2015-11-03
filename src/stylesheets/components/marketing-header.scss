@@ -1,0 +1,19 @@
+.marketing-header {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.marketing-header__title,
+.marketing-header__lead {
+  margin: 0;
+  padding: 0;
+}
+
+.marketing-header__title {
+  font-size: rem($font-size-heading-l);
+}
+
+.marketing-header__lead {
+  font-size: rem($font-size-heading-m);
+  font-weight: $font-weight-lighter;
+}

@@ -1,0 +1,39 @@
+.avatar {
+  background-color: rgba(black, 0.04);
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.avatar--small {
+  width: 45px;
+  height: 45px;
+}
+
+.avatar--tiny {
+  width: 20px;
+  height: 20px;
+}
+
+.avatar--group-item {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+.avatar--group-button {
+  align-items: center;
+  background-color: rgba(black, 0.04);
+  border: 0;
+  color: $color-text-light;
+  display: inline-flex;
+  font-weight: $font-weight-bolder;
+  font-size: rem(32px);
+  transition: all 0.3s;
+  justify-content: center;
+
+  &:hover {
+    background-color: $color-brand-primary;
+    color: $color-text-inverse;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,19 @@
+---
+title: Example pages
+section: examples
+skip-docs-nav: true
+---
+
+<div class="l-container l-container--medium">
+  <h1 class="u-text-center">{{title}}</h1>
+  <br>
+  {{#each nav.examples}}
+    {{! Skip the first item }}
+    {{#if @index}}
+    <a href="{{../baseurl}}/{{this.path}}" target="_blank" class="docs-iframe-thumb">
+      <h2 class="u-text-center">{{this.name}}</h2>
+      <iframe src="{{../baseurl}}/{{this.path}}" frameborder="0" width="100%" class="docs-iframe-thumb__iframe"></iframe>
+    </a>
+    {{/if}}
+  {{/each}}
+</div>

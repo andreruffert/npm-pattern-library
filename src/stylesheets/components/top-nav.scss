@@ -1,0 +1,37 @@
+$top-nav-height: 38px;
+
+.top-nav {
+  background-color: $color-brand-primary;
+  border-bottom: 1px solid darken($color-brand-primary, 5%);
+  color: rgba($color-text-inverse, 0.8);
+  font-size: 0; // get rid of inline-block element spacing
+  height: $top-nav-height;
+  text-align: right;
+}
+
+.top-nav__item {
+  color: currentColor;
+  display: inline-block;
+  font-size: rem($font-size-narrowed);
+  padding-left: $ui-padding-default;
+  padding-right: $ui-padding-default;
+  height: inherit;
+  line-height: $top-nav-height;
+  transition: all 0.1s;
+}
+
+.top-nav__item:hover,
+.top-nav__item--active {
+  background-color: darken($color-brand-primary, 10%);
+  color: $color-text-inverse;
+  text-decoration: none;
+}
+
+.top-nav__item--npm-expansions {
+  float: left;
+  padding-left: 0;
+
+  &:hover {
+    background-color: inherit;
+  }
+}

@@ -1,0 +1,43 @@
+---
+title: Buttons
+section: components
+---
+
+<h1>{{title}}</h1>
+
+
+<p>Use the <code>button</code> class for a default button appearance with optional <code>button-secondary</code> modifier class.</p>
+{{#example}}
+<a href="#" class="button">Link</a>
+<button class="button">Button</button>
+<input type="button" value="Input" class="button">
+<input type="submit" value="Submit" class="button">
+<button class="button button--secondary">button secondary</button>
+{{/example}}
+
+
+<h2>Button sizes</h2>
+<p>Additional sizes? Add the optional <code>button--small</code> modifier class.</p>
+{{#example}}
+<a href="#" class="button button--small">button small</a>
+<a href="#" class="button button--small button--secondary">button small</a>
+{{/example}}
+
+
+<p>Create block level buttons, those that span the full width of a parent by adding the optional <code>button--block</code> modifier class.</p>
+{{#example}}
+<a href="#" class="button button--block">button block</a>
+<a href="#" class="button button--block button--secondary">button block</a>
+{{/example}}
+
+
+<h2>Disabled buttons</h2>
+<p>For disabled (unclickable) apperance use <code>disabled</code> attribute for <code>button</code> elements and <code>button--disabled</code> modifier for links.</p>
+{{#example}}
+<a href="#" class="button button--disabled">button small</a>
+<button class="button" disabled>Button</button>
+<input type="button" value="Input" class="button" disabled>
+<input type="submit" value="Submit" class="button" disabled>
+<button class="button button--secondary" disabled>button secondary</button>
+{{/example}}
+

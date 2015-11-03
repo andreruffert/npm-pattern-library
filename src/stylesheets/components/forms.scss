@@ -1,0 +1,47 @@
+input {
+  outline: 0;
+}
+
+::placeholder {
+  color: rgba(black, 0.3);
+}
+
+.form-element {
+  display: block;
+  margin-bottom: $ui-padding-spaced;
+}
+
+.form-element__caption {
+  font-weight: $font-weight-bold;
+  padding-left: 5px;
+}
+
+.form-element__control {
+  appearance: none;
+  background-color: rgba(black, 0.02);
+  border: 1px solid rgba(black, 0.2);
+  border-radius: 4px;
+  color: $color-text-default;
+  display: block;
+  font: $font-weight-normal #{$font-size-default}/#{$line-height-default} $font-default;
+  padding: 5px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  width: 100%;
+
+  &:focus {
+    background-color: white;
+    border-color: rgba(black, 0.4);
+    transition: all 0.1s;
+  }
+
+  &:focus::placeholder {
+    color: rgba(black, 0.08);
+    transition: all 0.1s;
+  }
+}
+
+.form-element__help {
+  color: $color-text-light;
+  padding-left: 8px;
+}

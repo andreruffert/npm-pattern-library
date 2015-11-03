@@ -1,0 +1,43 @@
+{
+  "name": "npm-pattern-library",
+  "version": "1.0.0-alpha.1",
+  "description": "A modular CSS pattern library.",
+  "scripts": {
+    "clean": "rimraf dist && rimraf .tmp",
+    "livereload": "mkdirp dist && live-reload src/views/ server/ dist/ .tmp/ --port 8081",
+    "serve": "nodemon --watch server --watch .tmp --watch src/views/_helpers --watch src/views/_partials -e js,json,html server",
+    "stats:css": "parker dist/assets/stylesheets/bundle.min.css --format=json > dist/assets/stylesheets/.stats.json",
+    "watch:css": "pleeease watch",
+    "watch:js": "npm run build:js -- -w",
+    "build:css": "pleeease compile",
+    "build:js": "esnow -e src/javascripts/index.js -o dist/assets/javascripts/ -f bundle.min.js -p",
+    "build:nav": "bin/build-nav",
+    "build:html": "NODE_ENV=production BASE_URL=/npm-pattern-library bin/build-html",
+    "build:images": "imagemin src/images dist/assets/images",
+    "build:fonts": "cp -rf src/fonts dist/assets/fonts",
+    "build": "npm-run-all clean build:* stats:css",
+    "deploy:gh-pages": "npm run build && bin/deploy-gh-pages",
+    "start": "npm-run-all clean build:nav --parallel livereload serve watch:*"
+  },
+  "author": "npm, Inc. <support@npmjs.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "compression": "^1.6.0",
+    "dotenv": "^1.2.0",
+    "esnow": "^2.0.1",
+    "express": "^4.13.3",
+    "gray-matter": "^2.0.1",
+    "handlebars": "^4.0.3",
+    "highlight.js": "^8.8.0",
+    "html-minifier": "^1.0.0",
+    "imagemin": "^3.2.2",
+    "live-reload": "^1.1.0",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.7.1",
+    "npm-run-all": "^1.2.12",
+    "parker": "0.0.9",
+    "pleeease-cli": "^4.0.0",
+    "recursive-readdir": "^1.3.0",
+    "rimraf": "^2.4.3"
+  }
+}

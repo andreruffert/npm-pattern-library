@@ -1,0 +1,19 @@
+{{#unless skip-docs-nav}}
+{{#if section}}
+<nav class="docs-nav">
+  <div class="l-container">
+    {{#each nav}}
+    {{#equal @key 'section'}}
+    <ul class="u-list-unstyled l-columnar">
+    {{#each this}}
+      <li class="docs-nav__item {{#equal this.name 'title'}}docs-nav__item--active{{/equal}}">
+        <a href="{{../../baseurl}}/{{this.path}}">{{this.name}}</a>
+      </li>
+    {{/each}}
+    </ul>
+    {{/equal}}
+    {{/each}}
+  </div>
+</nav>
+{{/if}}
+{{/unless}}

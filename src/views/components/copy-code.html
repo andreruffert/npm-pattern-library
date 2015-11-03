@@ -1,0 +1,14 @@
+---
+title: Copy code
+section: components
+---
+
+<h1>{{title}}</h1>
+
+
+<p>Autoselects the text automatically on click. Can be optionaly combined with every <code>icon-*</code> class.</p>
+{{#example}}
+<label class="copy-code icon-download">
+  <input type="text" class="copy-code__text" value="npm install package-name" readonly onclick="this.focus();this.select()" aria-label="npm install command">
+</label>
+{{/example}}

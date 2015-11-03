@@ -1,0 +1,12 @@
+{
+  "in": ["src/stylesheets/index.scss"],
+  "out": "dist/assets/stylesheets/bundle.min.css",
+  "sass": true,
+  "browsers": ["last 3 versions"],
+  "import": { "path": "src/stylesheets" },
+  "sourcemaps": {
+    "map": {
+      "inline": false
+    }
+  }
+}

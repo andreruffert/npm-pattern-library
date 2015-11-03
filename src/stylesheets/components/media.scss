@@ -1,0 +1,35 @@
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.media--center {
+  align-items: center;
+}
+
+.media--reverse {
+  > .media__image {
+    order: 1;
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+}
+
+.media__image {
+  margin-right: 1rem;
+}
+
+.media__body {
+  flex: 1;
+
+  // Remove top space for e.g. `h*` tags
+  :first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  // Remove space for e.g. `p` tags
+  :last-child {
+    margin-bottom: 0;
+  }
+}

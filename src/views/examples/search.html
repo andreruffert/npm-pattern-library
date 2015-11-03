@@ -1,0 +1,35 @@
+---
+title: Search result
+layout: page
+section: example
+---
+
+<div class="l-container">
+  <h2 class="pagehead">n results for <a href="#">‘query’</a></h2>
+
+  <div class="l-content">
+    <ul class="package-list">
+      {{#repeat 20}}
+      <li class="package-list__item">
+        <h3 class="package-list__item-title"><a href="#">name</a>&nbsp;&nbsp;<a href="#" class="package-list__item-title-author">author</a></h3>
+        <div class="package-list__item-description">
+          <p>description</p>
+          <p><i class="icon-star"></i>&nbsp; 0 &nbsp;&nbsp; v1.0.0</p>
+          <p><i class="icon-tag"></i>&nbsp; keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8</p>
+        </div>
+      </li>
+      {{/repeat}}
+    </ul>
+    <br>
+    <br>
+    <div class="u-text-center">
+      <a href="#" class="button button--small button--secondary button--disabled">Previous Page</a>
+      <a href="#" class="button button--small button--secondary">Next Page</a>
+    </div>
+    <br>
+  </div>
+
+  <div class="l-sidebar">
+    <p><a href="#" class="link-muted u-text-underline">Lorem</a>, <a href="#" class="link-muted u-text-underline">ipsum</a>, <a href="#" class="link-muted u-text-underline">dolor</a> sit amet, consectetur adipisicing elit. Fugit porro consectetur commodi iure blanditiis.<br><a href="#" class="u-text-light">View all n…</a></p>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+//- Whitespace
+
+$space:                   30px;
+$ui-padding-extra-spaced: $space;
+$ui-padding-spaced:       $space/2;
+$ui-padding-default:      $space/3;
+$ui-padding-narrow:       $space/6;
+
+//- Font Families
+
+$font-default: "Source Sans Pro", "Lucida Grande", sans-serif;
+$font-monospaced: Menlo, Monaco, Consolas, monospace;
+
+//- Font Sizes
+
+$rem-base: 16px;
+
+$font-size-default:   16px;
+$font-size-medium:    15px;
+$font-size-narrowed:  14px;
+$font-size-small:     13px;
+
+$font-size-heading-l: 44px;
+$font-size-heading-m: 24px;
+$font-size-heading-s: 20px;
+
+//- Font Weights
+
+$font-weight-lighter: 300;
+$font-weight-normal:  400;
+$font-weight-bold:    600;
+$font-weight-bolder:  700;
+
+//- Line Heights
+
+$line-height-default: 25px;
+
+//- Layout container widths
+
+$l-container-width:        1180px;
+$l-container-width-medium:  640px;
+$l-container-width-narrow:  420px;
+
+//- Responsive breakpoints
+
+$bp-sm:  480px;
+$bp-md:  768px;
+$bp-lg:  900px;
+$bp-xl: 1180px;
+
+//- Colors
+
+$color-brand-primary:           #cb3837;
+$color-brand-secondary:         rgba(black, 0.8);
+$color-text-default:            rgba(black, 0.8);
+$color-text-inverse:            white;
+$color-text-faded:              rgba(black, 0.6);
+$color-text-light:              rgba(black, 0.4);
+$color-text-lighter:            rgba(black, 0.2);
+
+//- Imports
+
+@import "helpers/functions";
+@import "helpers/mixins";
+
+@import "base/normalize";
+@import "base/utilities";
+@import "base/utilities-responsive";
+
+@import "base/base";
+@import "base/code";
+@import "base/headings";
+@import "base/hljs";
+@import "base/icons";
+@import "base/layout";
+
+@import "components/avatars";
+@import "components/badges";
+@import "components/buttons";
+@import "components/copy-code";
+@import "components/flex-video";
+@import "components/footer";
+@import "components/forms";
+@import "components/header";
+@import "components/links";
+@import "components/list-group";
+@import "components/marketing-header";
+@import "components/media";
+@import "components/package-header";
+@import "components/package-list";
+@import "components/page-nav";
+@import "components/pagehead";
+@import "components/showcase-list";
+@import "components/top-nav";
+

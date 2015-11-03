@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var mkdirp = require('mkdirp');
+var readdir = require('recursive-readdir');
+var path = require('path');
+var htmlMinify = require('html-minifier').minify;
+var ViewEngine = require('../server/lib/viewEngine');
+
+var htmlMinifyOptions = {
+  removeComments: true,
+  collapseWhitespace: true,
+  minifyJS: true,
+  minifyCSS: true
+};
+
+var viewEngine = new ViewEngine({
+  relativeTo: path.resolve(__dirname, '../src'),
+  context: require('../server/lib/config')
+});
+
+readdir(path.resolve(__dirname, '../src/views'), ['_*'], function(err, files) {
+  if (err) {
+    throw err;
+  }
+  files.forEach(function(file) {
+    var distPath = getDistPath(file);
+    var viewFile = file.split('views').pop().split('.')[0];
+    mkdirp(distPath, function (err) {
+      if (err) {
+        throw err;
+      }
+      fs.writeFileSync(distPath + '/index.html', htmlMinify(viewEngine.render(viewFile), htmlMinifyOptions), 'utf-8');
+    });
+  });
+});
+
+/**
+ * Returns a directory path based on a filename for sane URL's without `.html` suffix.
+ * @param  {String} filepath
+ * @return {String}
+ */
+function getDistPath(filepath) {
+  filepath = path.join(__dirname, '../dist', filepath.split('views').pop());
+  if (path.basename(filepath) === 'index.html') {
+    return path.dirname(filepath);
+  }
+  return filepath.split('.')[0];
+}

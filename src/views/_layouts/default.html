@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {{> head}}
+  <style>
+    .docs-header {
+      background: #cb3837;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0;
+      height: 50px;
+      text-align: right;
+    }
+    .docs-header__logo {
+      color: white;
+      float: left;
+      margin: 11px 0;
+    }
+    .docs-header__title {
+      float: left;
+      font-size: 15px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 45px;
+      margin-left: 5px;
+    }
+    .docs-header__link {
+      color: currentColor;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 50px;
+      padding-left: 10px;
+      padding-right: 10px;
+      transition: all 0.1s;
+    }
+    .docs-header__link:hover,
+    .docs-header__link--active {
+      background-color: #a42c2b;
+      color: white;
+      text-decoration: none;
+    }
+
+    .docs-nav {
+      border-bottom: 2px solid rgba(0, 0, 0, .08);
+    }
+    .docs-nav__item {
+      color: rgba(0,0,0,0.4);
+      text-decoration: none;
+    }
+    .docs-nav__item a {
+      border-left: 2px solid transparent;
+      color: inherit;
+      display: inline-block;
+      margin: 5px 0;
+      padding: 0 5px;
+      text-decoration: inherit;
+      transition: all 0.1s;
+    }
+    .docs-nav__item a:hover,
+    .docs-nav__item--active a {
+      border-color: #cb3837;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    .docs-nav__item--active {
+      font-weight: bold;
+    }
+
+    .docs-example {
+      border: 1px solid #f5f5f5;
+      border-radius: 2px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+    .docs-example__rendered {
+      padding: 15px;
+    }
+    .docs-example__code pre {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .docs-visualize-l .docs-example__rendered * {
+      background-color: currentColor;
+      border-radius: 3px;
+      color: rgba(203,56,55,.08);
+      min-height: 50px;
+    }
+
+    .docs-iframe-thumb {
+      border: 2px solid rgba(0, 0, 0, .08);
+      border-radius: 3px;
+      color: rgba(0, 0, 0, .8);
+      display: block;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      max-width: 290px;
+      margin-bottom: 20px;
+      height: 400px;
+    }
+    .docs-iframe-thumb:after {
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 20%;
+      position: absolute;
+      bottom: 0;
+    }
+    .docs-iframe-thumb:hover {
+      border-color: #cb3837;
+      color: #cb3837;
+      text-decoration: none;
+    }
+    .docs-iframe-thumb:nth-child(even) {
+      margin-left: 20px;
+    }
+    .docs-iframe-thumb__iframe {
+      pointer-events: none;
+      transform: scale(0.243);
+      transform-origin: 0 0;
+    }
+  </style>
+</head>
+<body>
+  {{> docs-header}}
+  {{> docs-nav}}
+
+  <main class="l-container">
+    {{{ content }}}
+  </main>
+
+  <footer class="l-container">
+    <div class="footer-mini">
+      <span data-js="♥">npm loves you</span>
+    </div>
+  </footer>
+  {{> scripts}}
+</body>
+</html>

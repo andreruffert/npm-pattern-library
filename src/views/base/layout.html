@@ -1,0 +1,66 @@
+---
+title: Layout
+layout: default
+section: base
+---
+
+<h1>{{title}}</h1>
+<p>All layout selectors are prefixed with <code>l-</code>.</p>
+
+
+<h2>Container column</h2>
+<p>Fixed <code>max-width</code>, centered column for site content with a <b>20px</b> side <code>padding</code>. Also clears floats.</p>
+<div class="docs-visualize-l">
+  {{#example}}
+  <div class="l-container">
+    <!-- Content here -->
+  </div>
+
+  <br>
+
+  <div class="l-container l-container--medium">
+    <!-- Content here -->
+  </div>
+
+  <br>
+
+  <div class="l-container l-container--narrow">
+    <!-- Content here -->
+  </div>
+  {{/example}}
+</div>
+
+
+<h2>Content/sidebar column</h2>
+<div class="docs-visualize-l">
+  {{#example}}
+  <div class="l-container">
+    <div class="l-content">
+      <!-- Content here -->
+    </div>
+    <div class="l-sidebar">
+      <!-- Content here -->
+    </div>
+  </div>
+  {{/example}}
+</div>
+
+
+<h2>Columnar</h2>
+<div class="docs-visualize-l">
+  {{#example}}
+  <div class="l-container">
+    <div class="l-columnar">
+      <div class="l-columnar-item">
+        <!-- Content here -->
+      </div>
+      <div class="l-columnar-item">
+        <!-- Content here -->
+      </div>
+      <div class="l-columnar-item">
+        <!-- Content here -->
+      </div>
+    </div>
+  </div>
+  {{/example}}
+</div>

@@ -1,0 +1,15 @@
+//- Responsive utilities
+
+.hidden-md-up {
+  @include mq($bp-md) {
+    display: none;
+  }
+}
+
+.hidden-md-down {
+  display: none;
+
+  @include mq($bp-md) {
+    display: block;
+  }
+}

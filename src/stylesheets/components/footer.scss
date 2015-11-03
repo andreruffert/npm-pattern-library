@@ -1,0 +1,25 @@
+.footer {
+  @extend .l-columnar;
+  margin: 80px 0 80px 0;
+}
+
+.footer__group {
+  @extend .l-columnar-item;
+}
+
+.footer__group-heading {
+  border-bottom: 1px solid rgba(black, 0.08);
+  line-height: 2;
+}
+
+.footer__group-item {
+  font-weight: $font-weight-bold;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-mini {
+  color: $color-text-light;
+  text-align: center;
+  margin: 80px 0 80px 0;
+}

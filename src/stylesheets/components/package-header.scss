@@ -1,0 +1,19 @@
+.package-header {
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.package-header__name {
+  padding-top: 0;
+
+  & > a,
+  & > a:hover {
+    color: $color-text-default;
+    text-decoration: none;
+  }
+}
+
+.package-header__description {
+  font-size: rem(24px);
+  font-weight: $font-weight-lighter;
+}

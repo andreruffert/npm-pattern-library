@@ -1,0 +1,32 @@
+---
+title: npm pattern library
+section: entry
+skip-docs-nav: true
+---
+
+<h1>Scaffolding</h1>
+
+
+<h2>HTML5 doctype</h2>
+<p>This pattern library makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype.<br>
+Include it at the beginning of all your pages. The simplest HTML file looks like this:</p>
+{{#code}}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    …
+  </body>
+</html>
+{{/code}}
+
+
+<h2>Box-sizing</h2>
+<p>To more easily assign widths to elements that also have <code>padding</code>, <code>borders</code> etc. all elements <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank"><code>box-sizing</code></a> is set to <code>border-box</code>.</p>
+
+
+<h2>Built on normalize.css</h2>
+<p>For improved cross-browser rendering, we use a adjusted <a href="http://necolas.github.io/normalize.css/" target="_blank">normalize.css</a> to correct small inconsistencies across browsers and devices.</p>

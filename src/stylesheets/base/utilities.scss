@@ -1,0 +1,50 @@
+//- Text alignment
+
+.u-text-left    { text-align: left; }
+.u-text-center  { text-align: center; }
+.u-text-right   { text-align: right; }
+
+//- Text colors
+
+.u-text-primary { color: $color-brand-primary; }
+.u-text-faded   { color: $color-text-faded; }
+.u-text-light   { color: $color-text-light; }
+.u-text-lighter { color: $color-text-lighter; }
+
+//- Text decorations
+
+.u-text-underline { text-decoration: underline; }
+
+//- Text sizes
+
+.u-text-medium    { font-size: rem($font-size-medium); }
+.u-text-narrowed  { font-size: rem($font-size-narrowed); }
+.u-text-small     { font-size: $font-size-small; }
+
+//- Text truncate
+
+.u-text-truncate {
+  max-width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//- Lists
+
+.u-list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+//- Clearfix: contain floats
+
+.u-clearfix:before,
+.u-clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.u-clearfix:after {
+  clear: both;
+}

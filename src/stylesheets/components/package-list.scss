@@ -1,0 +1,27 @@
+.package-list {
+  // No need to set list-style: none; since `.package-list__item` is block level.
+  padding-left: 0;
+}
+
+.package-list__item {
+  display: block;
+}
+
+.package-list__item-title {
+  font-size: rem(24px);
+}
+
+.package-list__item-title-author {
+  color: $color-text-light;
+  font-family: $font-monospaced;
+  font-size: rem(18px);
+}
+
+.package-list__item-description {
+  color: $color-text-light;
+  font-size: rem($font-size-small);
+
+  p {
+    margin-bottom: 0;
+  }
+}

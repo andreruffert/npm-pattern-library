@@ -1,0 +1,26 @@
+.page-nav {
+  border-bottom: 2px solid rgba(black, 0.08);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-nav__item {
+  color: $color-text-light;
+  display: inline-block;
+  font-weight: $font-weight-bold;
+  padding: 26px 0 15px 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  & + & {
+    margin-left: $ui-padding-extra-spaced;
+  }
+}
+
+.page-nav__item:hover,
+.page-nav__item--active {
+  border-bottom: 2px solid $color-brand-primary;
+  color: $color-text-default;
+}

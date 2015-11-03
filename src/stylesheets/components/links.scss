@@ -1,0 +1,13 @@
+.link-primary,
+.link-secondary {
+  font-weight: $font-weight-bold;
+}
+
+.link-secondary,
+.link-muted {
+  color: $color-text-default;
+
+  &:hover {
+    color: $color-brand-primary;
+  }
+}

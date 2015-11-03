@@ -1,0 +1,72 @@
+.button {
+  background-color: $color-brand-primary;
+  border: 1px solid $color-brand-primary;
+  border-radius: 4px;
+  color: $color-text-inverse;
+  cursor: pointer;
+  font-size: rem(18px);
+  display: inline-block;
+  line-height: $line-height-default;
+  padding: $ui-padding-default $ui-padding-extra-spaced;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-brand-secondary;
+    border-color: $color-brand-secondary;
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &.button--disabled,
+  &.button--disabled:hover {
+    background-color: $color-brand-primary;
+    border-color: $color-brand-primary;
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  & + & {
+    margin-left:  $ui-padding-narrow;
+    margin-top: $ui-padding-narrow;
+  }
+}
+
+.button--secondary {
+  background-color: white;
+  border-color: rgba(black, 0.08);
+  color: $color-brand-primary;
+
+  &:hover {
+    background-color: $color-brand-primary;
+    border-color: darken($color-brand-primary, 10%);
+    color: white;
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &.button--disabled,
+  &.button--disabled:hover {
+    background-color: white;
+    border-color: rgba(black, 0.08);
+    color: $color-text-lighter;
+    opacity: 1;
+  }
+}
+
+//- Sizes
+
+.button--block {
+  display: block;
+  width: 100%;
+
+  & + & {
+    margin-left: 0;
+  }
+}
+
+.button--small {
+  border-radius: 2px;
+  font-size: rem(16px);
+  padding: 2px $ui-padding-default;
+}

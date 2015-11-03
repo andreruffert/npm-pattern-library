@@ -1,0 +1,143 @@
+$header-search-height: 47px;
+$header-search-submit-width: 70px;
+
+.header {
+  @extend .u-clearfix;
+  background-color: rgba(black, 0.08);
+  border-bottom: 1px solid #d3d3d3;
+  padding: 1rem 0 1rem;
+  width: 100%;
+
+  &,
+  & > div {
+    align-items: center;
+    display: flex;
+    flex: 0 0 100%;
+    flex-flow: row wrap;
+  }
+}
+
+.header__logo {
+  margin-right: auto;
+  width: 80px;
+
+  @include mq($bp-md) {
+    flex: 0 0 auto;
+    order: 1;
+    width: auto;
+  }
+}
+
+.header__user {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+
+  @include mq($bp-md) {
+    flex: 0 0 auto;
+    order: 3;
+  }
+}
+
+.header__user-avatar {
+  display: inline-block;
+  flex: 0 0 auto;
+  order: 2;
+  margin-left: $ui-padding-default;
+  width: 25px;
+  height: 25px;
+
+  @include mq($bp-md) {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.header__user-action {
+  flex: 0 0 auto;
+  order: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.header__user-action-item {
+  display: block;
+  line-height: 1;
+  text-align: right;
+}
+
+.header__search {
+  display: block;
+  flex: 1 0 100%;
+  height: $header-search-height;
+  position: relative;
+  margin-top: 1rem;
+  order: 3;
+
+  @include mq($bp-md) {
+    flex: 1 0 auto;
+    margin: 0 1rem;
+    order: 2;
+  }
+}
+
+.header__search-input {
+  appearance: none;
+  border: 1px solid rgba(black, 0.2);
+  border-radius: 2px;
+  font-size: rem(18px);
+  font-weight: $font-weight-lighter;
+  width: 100%;
+  height: inherit;
+  padding: $ui-padding-default;
+  padding-right: $header-search-submit-width;
+
+  &:hover,
+  &:focus {
+    border-color: rgba(black, 0.4);
+    transition: all 0.2s ease-in;
+  }
+}
+
+.header__search-submit {
+  border-width: 0 0 0 1px;
+  border-style: solid;
+  border-color: rgba(black, 0.2);
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  color: #bababa;
+  display: inline-block;
+  width: $header-search-submit-width;
+  padding: 0;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+
+  &:hover {
+    border-width: 1px 1px 0 1px;
+    background-color: $color-brand-primary;
+    color: white;
+    top: 0;
+    right: 0;
+    width: $header-search-submit-width + 1;
+  }
+
+  &:hover + .header__search-input {
+    border-color: rgba(black, 0.4);
+  }
+}
+
+.header__search-submit-icon {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  > * {
+    stroke: currentColor;
+  }
+}

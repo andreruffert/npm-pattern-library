@@ -1,0 +1,31 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1,
+.heading-l {
+  font-size: rem($font-size-heading-l);
+  font-weight: $font-weight-normal;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  padding: 20px 0 5px 0;
+}
+
+h2,
+.heading-m {
+  font-size: rem($font-size-heading-m);
+  font-weight: $font-weight-bolder;
+  letter-spacing: 0;
+  line-height: 1.2;
+  padding: 20px 0 10px 0;
+}
+
+h3,
+h4,
+h5,
+h6,
+.heading-s {
+  font-size: rem($font-size-heading-s);
+  font-weight: $font-weight-bold;
+  padding: 20px 0 10px 0;
+}

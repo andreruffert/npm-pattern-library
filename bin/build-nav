@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var mkdirp = require('mkdirp');
+var readdir = require('recursive-readdir');
+var path = require('path');
+
+var nav = {};
+var distPath = path.resolve(__dirname, '../.tmp', 'navigation.json');
+
+readdir(path.resolve(__dirname, '../src/views'), ['_*'], function(err, files) {
+  if (err) {
+    throw err;
+  }
+  files.sort().forEach(function(file) {
+    var pagePath = file.split('views/').pop().split('.')[0];
+    var page = {
+      path: pagePath,
+      name: makeTitle(pagePath.substr(pagePath.lastIndexOf('/') + 1)),
+      section: pagePath.split('/')[0]
+    };
+    if (page.section !== 'index') {
+      if (!nav[page.section]) {
+        nav[page.section] = [];
+      }
+      nav[page.section].push(page);
+    }
+  });
+
+  mkdirp(path.dirname(distPath), function (err) {
+    if (err) {
+      throw err;
+    }
+    fs.writeFileSync(distPath, JSON.stringify(nav, null, 2), 'utf-8');
+  });
+});
+
+function ucfirst(str) {
+  return str.charAt(0).toUpperCase() + str.substr(1);
+}
+
+function makeTitle(slug) {
+  return ucfirst(slug).split('-').join(' ');
+}
