@@ -1,6 +1,6 @@
-# npm pattern library [WIP]
+# npm pattern library
 
-> A modular CSS pattern library.
+> This was a small experiment to build a modular CSS pattern library for npm.
 
 ## New developers quickstart
 
